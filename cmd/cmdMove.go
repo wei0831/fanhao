@@ -10,7 +10,7 @@ var cmdMove = &cobra.Command{
 	Short: "move",
 	Args:  cobra.MinimumNArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {
-		utli.Move(dir, to, args[0], numbering, exclude, wet)
+		utli.Move(dir, to, args[0], exclude, wet)
 	},
 }
 
@@ -20,5 +20,4 @@ func init() {
 	cmdMove.PersistentFlags().StringVarP(&dir, "dir", "d", ".", "search target dir")
 	cmdMove.PersistentFlags().StringVarP(&to, "to", "t", "", "move to target dir")
 	cmdMove.PersistentFlags().StringVarP(&exclude, "exclude", "e", "", "exclude the pattern")
-	cmdMove.PersistentFlags().StringVarP(&numbering, "numbering", "n", `\d\d\d`, "fanhao sperator -number-")
 }
