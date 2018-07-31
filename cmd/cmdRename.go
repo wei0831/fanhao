@@ -21,5 +21,5 @@ func init() {
 	cmdRename.PersistentFlags().StringVarP(&to, "to", "t", "", "move to target dir")
 	cmdRename.PersistentFlags().StringVarP(&exclude, "exclude", "e", "", "exclude the pattern")
 	cmdRename.PersistentFlags().StringVarP(&sperator, "sperator", "s", "-", "fanhao -sperator- number")
-	cmdRename.PersistentFlags().StringVarP(&numbering, "numbering", "n", `\d\d\d`, "fanhao sperator -number-")
+	cmdRename.PersistentFlags().StringVarP(&numbering, "numbering", "n", `\d{3}`, "fanhao sperator -number-")
 }
